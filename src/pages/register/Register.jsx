@@ -16,7 +16,7 @@ export default function Register() {
 
     try {
       const res = await axios.post(
-        "https://mellisa-blogger.herokuapp.com/auth/register",
+        "https://mellisa-blogger.herokuapp.com/register",
         {
           username,
           email,
