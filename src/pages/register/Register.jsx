@@ -16,7 +16,7 @@ export default function Register() {
 
     try {
       const res = await axios.post(
-        "https://mellisa-blogger.herokuapp.com/register",
+        "https://mellisa-blogger.herokuapp.com/auth/register",
         {
           username,
           email,
@@ -24,7 +24,9 @@ export default function Register() {
         }
       );
       res.data &&
-        window.location.replace("https://mellisa-blogger.herokuapp.com/login");
+        window.location.replace(
+          "https://mellisa-blogger.herokuapp.com/auth/login"
+        );
     } catch (err) {
       setError(true);
     }
