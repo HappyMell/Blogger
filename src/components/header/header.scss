@@ -1,0 +1,42 @@
+@import "../../scss/abstracts/_variables.scss";
+@import "../../scss//abstracts/mixins";
+
+.header {
+  // margin-top: 30px;
+  // margin-top: 60px;
+
+  &Titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lora", serif;
+    color: #f6eae8;
+  }
+
+  &TitleSm {
+    position: absolute;
+    top: 15%;
+    font-size: 20px;
+
+    @include respond-to(xl) {
+      top: 12%;
+    }
+  }
+
+  &TitleLg {
+    position: absolute;
+    top: 25%;
+    font-size: 100px;
+
+    @include respond-to(xl) {
+      top: 20%;
+    }
+  }
+
+  &Img {
+    width: 100%;
+    height: 450px;
+    margin-top: 80px;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,132 @@
+@import "../../scss/abstracts/_variables.scss";
+@import "../../scss//abstracts/mixins";
+
+.singlePost {
+  // flex: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include respond-to(lg) {
+    //flex: 0 0 70%;
+    flex: 9;
+  }
+
+  &PostWrapper {
+    //  padding: 20px;
+    padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(lg) {
+      width: 100%;
+      //  align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.singlePostImg {
+  // width: 100%;
+  // height: 300px;
+  max-height: 290px;
+  border-radius: 5px;
+  object-fit: cover;
+
+  @include respond-to(sm) {
+    width: 100%;
+    height: 400px;
+  }
+
+  @include respond-to(lg) {
+    // width: 56%;
+    height: 402px;
+    object-fit: cover;
+  }
+}
+
+.singlePostTitle {
+  text-align: center;
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+}
+
+.singlePostTitleInput {
+  text-align: center;
+  margin: 10px;
+  font-family: "Lora", serif;
+  font-size: 28px;
+  border: none;
+  color: gray;
+  border-bottom: 1px solid lightgray;
+}
+
+.singlePostTitleInput:focus {
+  outline: none;
+}
+
+.singlePostEdit {
+  float: right;
+  font-size: 16px;
+}
+
+.singlePostIcon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.singlePostIcon:first-child {
+  color: teal;
+}
+
+.singlePostIcon:last-child {
+  color: tomato;
+}
+
+.singlePostInfo {
+  margin: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  // font-size: 16px;
+  font-size: 12px;
+  color: #b39656;
+  font-family: "Varela Round", sans-serif;
+}
+
+.singlePostDesc {
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 10px 20px;
+}
+
+.singlePostDesc::first-letter {
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.singlePostDescInput {
+  border: none;
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.singlePostDescInput:focus {
+  outline: none;
+}
+
+.singlePostButton {
+  border: none;
+  background-color: teal;
+  padding: 5px;
+  width: 100px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
+}
