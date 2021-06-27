@@ -15,12 +15,16 @@ export default function Register() {
     setError(false);
 
     try {
-      const res = await axios.post("/auth/register", {
-        username,
-        email,
-        password,
-      });
-      res.data && window.location.replace("/login");
+      const res = await axios.post(
+        "https://mellisa-blogger.herokuapp.com/auth/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
+      res.data &&
+        window.location.replace("https://mellisa-blogger.herokuapp.com/login");
     } catch (err) {
       setError(true);
     }

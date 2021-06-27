@@ -24,13 +24,18 @@ export default function Write() {
       newPost.photo = filename;
 
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://mellisa-blogger.herokuapp.com/upload", data);
       } catch (err) {}
     }
 
     try {
-      const res = await axios.post("/posts", newPost);
-      window.location.replace("/post/" + res.data._id);
+      const res = await axios.post(
+        "https://mellisa-blogger.herokuapp.com/posts",
+        newPost
+      );
+      window.location.replace(
+        "https://mellisa-blogger.herokuapp.com/post/" + res.data._id
+      );
     } catch (err) {}
   };
 

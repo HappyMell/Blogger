@@ -13,7 +13,7 @@ export default function Setting() {
 
   const { user, dispatch } = useContext(Context);
 
-  const PF = "https://shielded-basin-70006.herokuapp.com/images/";
+  const PF = "https://mellisa-blogger.herokuapp.com/images/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +37,10 @@ export default function Setting() {
     }
 
     try {
-      const res = await axios.put("/users/" + user._id, updatedUser);
+      const res = await axios.put(
+        "https://mellisa-blogger.herokuapp.com/users/" + user._id,
+        updatedUser
+      );
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

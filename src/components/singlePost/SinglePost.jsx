@@ -6,7 +6,7 @@ import { Context } from "../../context/Context";
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
-  const PF = "https://shielded-basin-70006.herokuapp.com/images/";
+  const PF = "https://mellisa-blogger.herokuapp.com/images/";
   const { user } = useContext(Context);
 
   const [title, setTitle] = useState("");
@@ -16,7 +16,9 @@ export default function SinglePost() {
   const [post, setPost] = useState({});
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axios.get(
+        "https://mellisa-blogger.herokuapp.com/posts/" + path
+      );
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -26,20 +28,26 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
-        data: { username: user.username },
-      });
+      await axios.delete(
+        `https://mellisa-blogger.herokuapp.com/posts/${post._id}`,
+        {
+          data: { username: user.username },
+        }
+      );
       window.location.replace("/");
     } catch (err) {}
   };
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
-        username: user.username,
-        title,
-        desc,
-      });
+      await axios.put(
+        `https://mellisa-blogger.herokuapp.com/posts/${post._id}`,
+        {
+          username: user.username,
+          title,
+          desc,
+        }
+      );
       setUpdateMode(false);
     } catch (err) {}
   };

@@ -7,7 +7,7 @@ import axios from "axios";
 export default function Sidebar() {
   const [cats, setCats] = useState([]);
   const { user } = useContext(Context);
-  const PF = "https://shielded-basin-70006.herokuapp.com/images/";
+  const PF = "https://mellisa-blogger.herokuapp.com/images/";
 
   useEffect(() => {
     const getCats = async () => {

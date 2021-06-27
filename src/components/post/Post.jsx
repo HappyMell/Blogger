@@ -2,7 +2,7 @@ import "./post.scss";
 import { Link } from "react-router-dom";
 
 export default function Post({ post }) {
-  const PF = "https://shielded-basin-70006.herokuapp.com/images/";
+  const PF = "https://mellisa-blogger.herokuapp.com/images/";
   return (
     <div className="post">
       {post.photo && <img className="postImg" src={PF + post.photo} alt="" />}
