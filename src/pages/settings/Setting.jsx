@@ -32,7 +32,7 @@ export default function Setting() {
       updatedUser.profilePic = filename;
 
       try {
-        await axios.post("/upload", data);
+        await axios.post("https://mellisa-blogger.herokuapp.com/upload", data);
       } catch (err) {}
     }
 

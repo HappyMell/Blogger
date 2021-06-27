@@ -88,7 +88,10 @@ export default function SinglePost() {
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
             Author:
-            <Link className="link" to={`/?user=${post.username}`}>
+            <Link
+              className="link"
+              to={`https://mellisa-blogger.herokuapp.com/?user=${post.username}`}
+            >
               <b>{post.username}</b>
             </Link>
           </span>

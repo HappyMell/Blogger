@@ -22,12 +22,18 @@ export default function Navbar() {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link to={"/"} className="link">
+            <Link
+              to={"https://mellisa-blogger.herokuapp.com/"}
+              className="link"
+            >
               HOME
             </Link>
           </li>
           <li className="topListItem">
-            <Link to={"/write"} className="link">
+            <Link
+              to={"https://mellisa-blogger.herokuapp.com/write"}
+              className="link"
+            >
               WRITE
             </Link>
           </li>
@@ -38,18 +44,24 @@ export default function Navbar() {
       </div>
       <div className="topRight">
         {user ? (
-          <Link to="/settings">
+          <Link to="https://mellisa-blogger.herokuapp.com/settings">
             <img className="topImg" src={PF + user.profilePic} alt="" />
           </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">
-              <Link to={"/login"} className="link">
+              <Link
+                to={"https://mellisa-blogger.herokuapp.com/login"}
+                className="link"
+              >
                 LOGIN
               </Link>
             </li>
             <li className="topListItem">
-              <Link to={"/register"} className="link">
+              <Link
+                to={"https://mellisa-blogger.herokuapp.com/register"}
+                className="link"
+              >
                 REGISTER
               </Link>
             </li>
